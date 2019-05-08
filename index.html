@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ableton Quiz</title>
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header role="banner" class="header">
-        <img src="https://png2.kisspng.com/sh/3ef0b90f8386b10cf4f8f731a6cd4e43/L0KzQYm3VsAzN6Zmg5H0aYP2gLBuTfFjdJZ5h9C2bHn5dX7qjB1xfaVqip9yY3Bxg37zjBdwNZJnhNd9b36wRbO4U8A6PGZpfqhuOEexQ4a3VcA3PGk2TaQCOUe3QoK6WcE2Ol91htk=/kisspng-ableton-live-computer-icons-logo-ableton-5b130945df6e87.3505064815279742139152.png" alt="ableton logo">
-        <div class="score">Score: 5</div>
-        <div class="progress">3/10</div>
+        <a href="http://www.ableton.com"><img class="centered-img" src="https://png2.kisspng.com/sh/3ef0b90f8386b10cf4f8f731a6cd4e43/L0KzQYm3VsAzN6Zmg5H0aYP2gLBuTfFjdJZ5h9C2bHn5dX7qjB1xfaVqip9yY3Bxg37zjBdwNZJnhNd9b36wRbO4U8A6PGZpfqhuOEexQ4a3VcA3PGk2TaQCOUe3QoK6WcE2Ol91htk=/kisspng-ableton-live-computer-icons-logo-ableton-5b130945df6e87.3505064815279742139152.png" alt="ableton logo"></a>
+        <div class="score">Score: </div>
+        <div class="progress"></div>
+       
     </header>
     <main>
-        <p class="question">Demo Question?</p>
+        <section class="intro-text hidden">
+           <span>Test your knowledge on Ableton and music production.</span>
+           <button class="begin">Begin</button>
+        </section>
+        <section class="ending-content hidden">
+            <p class="final-score">Final Score: </p>
+            <p class="ending-message"></p>
+            <button class="begin try-again">Try Again</button>
+        </section>
+         <p class="question">Demo Question?</p>
         <form class="answers">
             <ul class="answers-list">
                 <li class="answer">Test answer</li>
