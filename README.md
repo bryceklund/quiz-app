@@ -1,73 +1,73 @@
 #Quiz App
 
 Questions
-
+<br>
 1. When was Ableton Live first released?
-
+<br>
     -1998
-    -1993
-    -2004
-    -2001 //correct answer
-
-2. What is the name of Ableton Live's parametric equalizer?
-
-    -ParaEQ
-    -EQ Three
-    -EQ Eight //correct answer
-    -Equalizer
-
-3. In music production, changing the value of a parameter over time is called...?
-
-    -Modulation
-    -Automation //correct answer
-    -Parameterization
-    -Novation
-
-4. Sidechain compression can be achieved on which of the below Ableton Live devices?
-
-    -Compressor
-    -Glue Compressor
-    -Multiband Compressor
-    -All of the Above //correct answer
-
-5. Ableton was initially created as an instrument. What is the name of the view that this refers to?
-
-    -Session View //correct answer
-    -Arrangement View
-    -Player View
-    -Timeline View
-
-6. What does MIDI stand for?
-
-    -Music Indication Delimiter Interface
-    -Multi-Instrumental Delivery Instruction
-    -Musical Instrument Digitial Interface //correct answer
-    -Markup Inductor Display Infrastructure
-
+    -1993<br>
+    -2004<br>
+    -2001 //correct answer<br>
+<br>
+2. What is the name of Ableton Live's parametric equalizer?<br>
+<br>
+    -ParaEQ<br>
+    -EQ Three<br>
+    -EQ Eight //correct answer<br>
+    -Equalizer<br>
+<br>
+3. In music production, changing the value of a parameter over time is called...?<br>
+<br>
+    -Modulation<br>
+    -Automation //correct answer<br>
+    -Parameterization<br>
+    -Novation<br>
+<br>
+4. Sidechain compression can be achieved on which of the below Ableton Live devices?<br>
+<br>
+    -Compressor<br>
+    -Glue Compressor<br>
+    -Multiband Compressor<br>
+    -All of the Above //correct answer<br>
+<br>
+5. Ableton was initially created as an instrument. What is the name of the view that this refers to?<br>
+<br>
+    -Session View //correct answer<br>
+    -Arrangement View<br>
+    -Player View<br>
+    -Timeline View<br>
+<br>
+6. What does MIDI stand for?<br>
+<br>
+    -Music Indication Delimiter Interface<br>
+    -Multi-Instrumental Delivery Instruction<br>
+    -Musical Instrument Digitial Interface //correct answer<br>
+    -Markup Inductor Display Infrastructure<br>
+<br>
 7. Ableton has released a hardware device to augment Live. What is it called?
-
-    -Push //correct answer
-    -Hotpads
-    -Sing
-    -Launchpad
-
-8. What programming language is Ableton written in?
-
-    -Python
-    -Java
-    -Perl
-    -C++ //correct answer
-
-9. What is the name of the visual coding language Ableton devices are written in?
-
-    -Cycling74
-    -Max //correct answer
-    -Moop
-    -MLI
-
-10. What is the name of the new wavetable synth included in Ableton Live 10?
-
-    -Wave
-    -FM
-    -Wavetable //correct answer
-    -Inductor
+<br>
+    -Push //correct answer<br>
+    -Hotpads<br>
+    -Sing<br>
+    -Launchpad<br>
+<br>
+8. What programming language is Ableton written in?<br>
+<br>
+    -Python<br>
+    -Java<br>
+    -Perl<br>
+    -C++ //correct answer<br>
+<br>
+9. What is the name of the visual coding language Ableton devices are written in?<br>
+<br>
+    -Cycling74<br>
+    -Max //correct answer<br>
+    -Moop<br>
+    -MLI<br>
+<br>
+10. What is the name of the new wavetable synth included in Ableton Live 10?<br>
+<br>
+    -Wave<br>
+    -FM<br>
+    -Wavetable //correct answer<br>
+    -Inductor<br>
