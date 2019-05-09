@@ -26,12 +26,12 @@ const STORE = [
     },
     {
         question: 'What does MIDI stand for?',
-        answers: ['-Music Indication Delimiter Interface', 'Multi-Instrumental Delivery Instruction', 'Musical Instrument Digitial Interface', 'Markup Inductor Display Infrastructur'],
+        answers: ['Music Indication Delimiter Interface', 'Multi-Instrumental Delivery Instruction', 'Musical Instrument Digitial Interface', 'Markup Inductor Display Infrastructure'],
         correct: 'Musical Instrument Digitial Interface'
     },
     {
         question: 'Ableton has released a hardware device to augment Live. What is it called?',
-        answers: ['-Push', 'Hotpads', 'Sing', 'Launchpad'],
+        answers: ['Push', 'Hotpads', 'Sing', 'Launchpad'],
         correct: 'Push'
     },
     {

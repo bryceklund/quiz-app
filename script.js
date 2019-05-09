@@ -1,5 +1,7 @@
 let progress = 0;
 let score = 0;
+let endingMessage = "";
+
 
 function progressCounter() {
     console.log('`progressCounter` is running...');
@@ -12,8 +14,14 @@ function handleCorrectAnswer(answer) {
     console.log('`handleCorrectAnswer` is running...');
     $(answer).addClass('answer-correct');
     $(answer).removeClass('answer');
+    $(answer).prop('disabled', true);
     $('.answer').prop('disabled', true);
+    $('.answer').removeClass('answer:hover');
     score += 1;
+    displayScoreAndProgress();
+    $('main').append(`<p class="answer-feedback">Correct<br><button class="next">&gt;</button></p>`)
+    handleNextClicks();
+
 }
 
 function handleIncorrectAnswer(answer) {
@@ -21,7 +29,10 @@ function handleIncorrectAnswer(answer) {
     $(answer).addClass('answer-incorrect');
     $(answer).removeClass('answer');
     $('.answer').prop('disabled', true);
-    $(STORE[progress]["correct"]) //need to highlight the correct answer. maybe need to implement an id systems????
+    $(answer).prop('disabled', true);
+    $('main').append(`<p class="answer-feedback">Incorrect<br><button class="next">&gt;</button></p>`)
+    handleNextClicks();
+
 }
 
 function handleAnswerClicks() {
@@ -45,6 +56,7 @@ function renderQuestion() {
 }
 
 function renderAnswers() {
+    //displays the next set of answers
     console.log('`renderAnswers` is running...');
     $('main').append(`
     <form class="answers">
@@ -59,11 +71,31 @@ function renderAnswers() {
 }
 
 function displayFinalScore() {
+    console.log('`displayFinalScore` is running');
     //returns score at the end of the quiz
+    mainToIntroMode();
+    if (score > 8) {
+        endingMessage = "Well done, nerd!";
+    } else if (score > 6) {
+        endingMessage = "Not bad, but not great either. Have you tried being better?";
+    } else {
+        endingMessage = "Yikes! Go watch a YouTube video or something!";
+    }
+    $('main').append(`<section class="ending-content">
+    <p class='final-score'>Final score: ${score * 10}%</p>
+    <p class="ending-message">${endingMessage}</p>
+    <button class="try-again">Try Again?</button>
+    </section>`);
+    restartQuiz();
 }
 
 function restartQuiz() {
     //restarts quiz when restart button is clicked
+    $('.try-again').click(function() {
+        score = 0;
+        progress = 0;
+        startQuiz();
+    });
 }
 
 function displayScoreAndProgress() {
@@ -86,9 +118,11 @@ function startQuiz() {
 }
 
 function nextQuestion() {
+    //increments the progress counter, updates the score, and displays new question/answers
     progressCounter();
     renderQuestion();
     renderAnswers();
+    displayScoreAndProgress();
 }
 
 function clearAnswers() {
@@ -105,6 +139,7 @@ function mainToIntroMode () {
     $('.intro-text').removeClass('hidden');
     $('.score').addClass('hidden');
     $('.progress').addClass('hidden');
+    $('.answer-feedback').remove();
 }
 
 function handleBeginClicks() {
@@ -115,6 +150,21 @@ function handleBeginClicks() {
         startQuiz();
     });
 }
+
+function handleNextClicks() {
+    console.log('`handleNextClicks is running...');
+    //moves the quiz forward when the 'next' button is clicked
+        $('.next').click(function()  {
+            if (progress == 9) {
+                displayFinalScore();
+            } else {
+                nextQuestion();
+            }
+            
+        });
+
+}
+
 
 function initializeQuiz () {
     mainToIntroMode();
