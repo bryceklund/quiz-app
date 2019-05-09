@@ -17,3 +17,11 @@ function displayFinalScore() {
 function restartQuiz() {
     //restarts quiz when restart button is clicked
 }
+
+function headerToQuizMode() {
+    //moves the ableton logo over and shows the score and question trackers
+}
+
+function headerToIntroMode() {
+    //hides the score and question trackers; moves ableton logo to center
+}
