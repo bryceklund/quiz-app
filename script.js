@@ -32,7 +32,6 @@ function handleIncorrectAnswer(answer) {
     $(answer).prop('disabled', true);
     $('main').append(`<p class="answer-feedback">Incorrect<br><button class="next">&gt;</button></p>`)
     handleNextClicks();
-
 }
 
 function handleAnswerClicks() {
@@ -59,7 +58,7 @@ function renderAnswers() {
     //displays the next set of answers
     console.log('`renderAnswers` is running...');
     $('main').append(`
-    <form class="answers">
+    <form class="answers" role="answer list">
         <ul class="answers-list">
             <button class="answer">${STORE[progress]["answers"][0]}</button>
             <button class="answer">${STORE[progress]["answers"][1]}</button>
@@ -81,7 +80,7 @@ function displayFinalScore() {
     } else {
         endingMessage = "Yikes! Go watch a YouTube video or something!";
     }
-    $('main').append(`<section class="ending-content">
+    $('main').append(`<section class="ending-content" role="ending content">
     <p class='final-score'>Final score: ${score * 10}%</p>
     <p class="ending-message">${endingMessage}</p>
     <button class="try-again">Try Again?</button>

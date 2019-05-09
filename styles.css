@@ -1,6 +1,23 @@
+html { 
+    background:     
+    linear-gradient(
+        rgba(255, 255, 255, .4),
+        rgba(255, 255, 255, .9)
+      ) no-repeat center center fixed,
+      url('https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/images/og-images/live.96bd28d4f91d.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+
+
+
 body > * {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
+    font-style: bold;
 }
 
 .centered-img {
@@ -22,7 +39,6 @@ body > * {
     margin-left: auto;
     margin-right: auto;
     align-self: center;
-    width: 100px;
 }
 
 header img {
@@ -42,6 +58,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 .question {
@@ -54,10 +71,12 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 5%;
+    margin-top: 10%;
 }
 
 .answers {
     width: 90%;
+    margin-top: 10%;
 }
 
 .answers-list {
@@ -75,7 +94,7 @@ main {
     height: 60px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: none;
+    border: 3px solid lightgrey;;
     font-size: 20px;
 }
 
@@ -102,9 +121,11 @@ main {
 .intro-text {
     margin-top: 20%;
     margin-bottom: 20%;
-    width: 60%;
+    width: 70%;
     text-align: center;
+    padding: 5%;
 }
+
 
 .begin {
     background: white;
@@ -119,7 +140,9 @@ main {
 }
 
 .ending-content {
-    margin-top: 25%;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, .5);
+    padding: 5%;
 }
 
 .final-score {
@@ -145,7 +168,9 @@ main {
 
 .answer-feedback {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 50px;
+    font-size: 25px;
+    text-shadow: 3px -3px 10px white;
 }
 
 .next {
@@ -153,9 +178,38 @@ main {
     background: none;
     border: none;
     width: 50px;
-    font-size: 35px;
+    font-size: 30px;
+    color: black;
 }
 
 .hidden {
     display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        max-width: 900px;
+    }
+    .answer, .answer-correct, .answer-incorrect {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 3px solid lightgrey;;
+        font-size: 20px;
+    }
+
+    .question {
+        margin-top: 2%;
+    }
+
+    .answers {
+        margin-top: 2%;
+    }
+
+    .ending-content {
+        width: 90%;
+    }
 }
