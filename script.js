@@ -41,7 +41,7 @@ function handleAnswerClicks() {
     $('.answer').click(function(event) {
         event.preventDefault();
         console.log($(event.currentTarget).html());
-        if ($(event.currentTarget).html() == STORE[progress]["correct"]) {
+        if ($(event.currentTarget).val() == STORE[progress]["correct"]) {
             handleCorrectAnswer($(event.currentTarget));
         } else {
             handleIncorrectAnswer($(event.currentTarget));
