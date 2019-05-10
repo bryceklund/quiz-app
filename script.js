@@ -148,6 +148,8 @@ function mainToIntroMode () {
     $('.score').addClass('hidden');
     $('.progress').addClass('hidden');
     $('.answer-feedback').remove();
+    $('.correction').remove();
+    $('.next').remove();
 }
 
 function handleBeginClicks() {
