@@ -70,21 +70,27 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5%;
-    margin-top: 10%;
+    margin: auto;
+    margin-bottom: 25%;
+}
+
+fieldset {
+    margin-right: 0;
+    padding-right: 0;
 }
 
 .answers {
     width: 90%;
+    margin: auto;
     margin-top: 10%;
 }
 
 .answers-list {
-    list-style: none;
     text-align: center;
     padding-left: 0;
     display: flex;
     flex-direction: column;
+    padding-right: 0;
 }
 
 .answer, .answer-correct, .answer-incorrect {
@@ -95,7 +101,7 @@ main {
     margin-top: 5px;
     margin-bottom: 5px;
     border: 3px solid lightgrey;;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .answer-correct, .answer-correct:hover {
@@ -174,12 +180,18 @@ main {
 }
 
 .next {
-    margin-top: 30%;
+    margin-top: 10%;
     background: none;
     border: none;
     width: 50px;
     font-size: 30px;
     color: black;
+}
+
+.correction {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 30px;
 }
 
 .hidden {
@@ -201,8 +213,13 @@ main {
         font-size: 20px;
     }
 
+    .next {
+        margin-top: 5%;
+    }
+
     .question {
         margin-top: 2%;
+        margin-bottom: 10%;
     }
 
     .answers {

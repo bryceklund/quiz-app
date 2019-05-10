@@ -30,7 +30,8 @@ function handleIncorrectAnswer(answer) {
     $(answer).removeClass('answer');
     $('.answer').prop('disabled', true);
     $(answer).prop('disabled', true);
-    $('main').append(`<p class="answer-feedback">Incorrect<br><button class="next">&gt;</button></p>`)
+    $('main').append(`<p class="answer-feedback">Incorrect<br>
+    <p class="correction"><em>The correct answer was ${STORE[progress]["correct"]}.</em></p><button class="next">&gt;</button></p>`)
     handleNextClicks();
 }
 
@@ -51,21 +52,29 @@ function handleAnswerClicks() {
 function renderQuestion() {
     console.log('`renderQuestion` is running...');
     //renders the current question + set of answers
-    $('main').html(`<p class="question">${STORE[progress]["question"]}</p>`);
+    $('main').html(`
+    <form class="answers answers-list" role="answer list">
+    <fieldset name="quiz-form">
+    <legend class="question">${STORE[progress]["question"]}</legend>
+    </fieldset>
+    </form>
+    
+    `);
 }
 
 function renderAnswers() {
     //displays the next set of answers
     console.log('`renderAnswers` is running...');
-    $('main').append(`
-    <form class="answers" role="answer list">
-        <ul class="answers-list">
-            <button class="answer">${STORE[progress]["answers"][0]}</button>
-            <button class="answer">${STORE[progress]["answers"][1]}</button>
-            <button class="answer">${STORE[progress]["answers"][2]}</button>
-            <button class="answer">${STORE[progress]["answers"][3]}</button>
-        </ul>
-    </form>`);
+    $('.answers-list').append(`
+            <label for="answer1"></label>
+            <input class="answer" type="button" id="answer1" name="answer" value="${STORE[progress]["answers"][0]}">            
+            <label for="answer2"></label>
+            <input class="answer" type="button" id="answer2" name="answer" value="${STORE[progress]["answers"][1]}">            
+            <label for="answer3"></label>
+            <input class="answer" type="button" id="answer3" name="answer" value="${STORE[progress]["answers"][2]}">            
+            <label for="answer4"></label>
+            <input class="answer" type="button" id="answer4" name="answer" value="${STORE[progress]["answers"][3]}">`
+    );
     handleAnswerClicks();
 }
 
