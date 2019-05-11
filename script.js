@@ -66,13 +66,13 @@ function renderAnswers() {
     //displays the next set of answers
     console.log('`renderAnswers` is running...');
     $('.answers-list').append(`
-            <label for="answer1" class="hidden">${STORE[progress]["answers"][0]}</label>
+            <label for="answer1" class="visually-hidden">${STORE[progress]["answers"][0]}</label>
             <input class="answer" type="button" id="answer1" name="answer" value="${STORE[progress]["answers"][0]}">            
-            <label for="answer2" class="hidden">${STORE[progress]["answers"][1]}</label>
+            <label for="answer2" class="visually-hidden">${STORE[progress]["answers"][1]}</label>
             <input class="answer" type="button" id="answer2" name="answer" value="${STORE[progress]["answers"][1]}">            
-            <label for="answer3" class="hidden">${STORE[progress]["answers"][2]}</label>
+            <label for="answer3" class="visually-hidden">${STORE[progress]["answers"][2]}</label>
             <input class="answer" type="button" id="answer3" name="answer" value="${STORE[progress]["answers"][2]}">            
-            <label for="answer4" class="hidden">${STORE[progress]["answers"][3]}</label>
+            <label for="answer4" class="visually-hidden">${STORE[progress]["answers"][3]}</label>
             <input class="answer" type="button" id="answer4" name="answer" value="${STORE[progress]["answers"][3]}">`
     );
     handleAnswerClicks();
